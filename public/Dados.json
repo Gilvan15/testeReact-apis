@@ -1,0 +1,22 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "nome": "Maria",
+            "idade": 22,
+            "status": "off"
+        },
+        {
+            "id": 2,
+            "nome": "João",
+            "idade": 25,
+            "status": "on"
+        },
+        {
+            "id": 3,
+            "nome": "Janaina",
+            "idade": 21,
+            "status": "on"
+        }
+    ]
+}

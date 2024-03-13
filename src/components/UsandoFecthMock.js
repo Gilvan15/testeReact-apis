@@ -5,7 +5,7 @@ export default function UsandoFecthMock() {
     const [tags, setTags] = useState([]);
 
     useEffect(()=> {
-        fetch('./Tags.json', {
+        fetch('./Dados.json', {
             headers: {
                 Accept: "application/json"
             }
@@ -20,13 +20,9 @@ export default function UsandoFecthMock() {
                 {tags.map(tag => (
                     <li key={tag.id}>
                         <p><strong> ID: {tag.id} </strong> </p>
-                        <p>Time: {tag.time}</p>
-                        <p>Data: {tag.date}</p>
-                        <p>Temperatura: {tag.TEMPERATURA} </p>
-                        <p>Inicio do Processo: {tag.INICIO_PROCESS_W}</p>
-                        <p>Produção: {tag.PRODUCAO}</p>
-                        <p>Maq Ligada/Desligada: {tag.MAQ_LIG_DES_B}</p>
-                        <p>Fim do Processo: {tag.FIM_PROCESS_B}</p>
+                        <p>Nome: {tag.nome}</p>
+                        <p>Idade: {tag.idade}</p>
+                        <p>Status: {tag.status}</p>
                       </li>                      
                 ))}
             </ul>

@@ -4,8 +4,16 @@ export default function UsandoFecthAPI() {
 
     const [dados, setDados] = useState([]);
 
+    // useEffect(() => {
+    //     fetch('https://jsonplaceholder.typicode.com/users')
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             setDados(data);
+    //         });
+    // }, []);
+
     useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/users')
+        fetch('http://localhost:8080/users/last-record')
             .then(response => response.json())
             .then(data => {
                 setDados(data);
@@ -18,11 +26,10 @@ export default function UsandoFecthAPI() {
             <ul>
                 {dados.map(usuario => (
                     <li key={usuario.id}>
-                        <strong>Nome: {usuario.name}</strong>
-                        <p>Nome: {usuario.username}</p>
-                        <p>E-mail: {usuario.email}</p>
-                        <p>Endereço: {usuario.address.street}</p>
-                        <p>Número: {usuario.address.suite}</p>
+                        <p><strong> ID: {usuario.id} </strong> </p>
+                        <p>Nome: {usuario.nome}</p>
+                        <p>Idade: {usuario.idade}</p>
+                        <p>Status: {usuario.status}</p>
                     </li>
                 ))}
             </ul>
